@@ -18,7 +18,7 @@ class Injector {
     @Singleton
     @Provides
     fun provideInterceptorClient(): OkHttpClient {
-        val apiKey = "<YOUR_API_KEY>"
+        // Your API Key from https://rapidapi.com/fyhao/api/currency-exchange
         return OkHttpClient.Builder()
             .addInterceptor { chain ->
                 val request = chain.request().newBuilder()
@@ -28,8 +28,7 @@ class Injector {
                     )
                     .addHeader(
                         "X-RapidAPI-Host",
-                        "currency-exchange.p.rapidapi.com" //gitignore
-                        // Your API Key from https://rapidapi.com/fyhao/api/currency-exchange
+                        "currency-exchange.p.rapidapi.com"
                     )
                     .build()
                 Log.d("Interceptor", "provideInterceptorClient: $request")
