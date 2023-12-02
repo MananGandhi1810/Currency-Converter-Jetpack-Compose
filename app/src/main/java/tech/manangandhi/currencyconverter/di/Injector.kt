@@ -29,7 +29,7 @@ class Injector {
                     .addHeader(
                         "X-RapidAPI-Host",
                         "currency-exchange.p.rapidapi.com" //gitignore
-                        // Your API Key
+                        // Your API Key from https://rapidapi.com/fyhao/api/currency-exchange
                     )
                     .build()
                 Log.d("Interceptor", "provideInterceptorClient: $request")
